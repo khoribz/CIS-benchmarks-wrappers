@@ -1,0 +1,22 @@
+Запуск процесса проверки безопасности и развертывания контейнера...
+Запуск docker-bench-security для проверки безопасности Docker...
+Найдены проблемы безопасности в Docker:
+[1;31m[WARN][0m 1.1.1 - Ensure a separate partition for containers has been created (Automated)
+[1;31m[WARN][0m 1.1.8 - Ensure auditing is configured for Docker files and directories - containerd.sock (Automated)
+[1;31m[WARN][0m 2.2 - Ensure network traffic is restricted between containers on the default bridge (Scored)
+[1;31m[WARN][0m 2.9 - Enable user namespace support (Scored)
+[1;31m[WARN][0m 2.12 - Ensure that authorization for Docker client commands is enabled (Scored)
+[1;31m[WARN][0m 2.13 - Ensure centralized and remote logging is configured (Scored)
+[1;31m[WARN][0m 2.14 - Ensure containers are restricted from acquiring new privileges (Scored)
+[1;31m[WARN][0m 2.15 - Ensure live restore is enabled (Scored)
+[1;31m[WARN][0m 2.16 - Ensure Userland Proxy is Disabled (Scored)
+[1;31m[WARN][0m 4.5 - Ensure Content trust for Docker is Enabled (Automated)
+[1;31m[WARN][0m 4.6 - Ensure that HEALTHCHECK instructions have been added to container images (Automated)
+[1;31m[WARN][0m      * No Healthcheck found: [khoribz/postgres_image:latest]
+[1;31m[WARN][0m      * No Healthcheck found: [gcr.io/k8s-minikube/kicbase:v0.0.44]
+[1;31m[WARN][0m      * No Healthcheck found: [khoribz/hw-2:latest]
+[1;31m[WARN][0m      * No Healthcheck found: 8ca4688f4f35
+[1;31m[WARN][0m      * No Healthcheck found: [hello-world:latest]
+[1;31m[WARN][0m      * No Healthcheck found: [yoichikawasaki/app-services-python:simple-flask-app-0.1.0]
+Запуск контейнера hello-world с образом hello-world:latest и опциями -p 80:80...
+a2236c48b188625e1b5db2ffc87aa0c625848ab0bc513a91032629d7fba12f40

@@ -1,0 +1,36 @@
+Выполнение: kubectl apply -f db-deployment.yaml  
+Выполнение: kubectl apply -f backend-deployment.yaml
+Выполнение: kubectl apply -f frontend-deployment.yaml
+Выполнение: kubectl apply -f db-deployment.yaml  
+Выполнение: kubectl apply -f backend-deployment.yaml
+Выполнение: kubectl apply -f frontend-deployment.yaml
+Выполнение: sudo kubectl apply -f db-deployment.yaml  
+Выполнение: sudo kubectl apply -f backend-deployment.yaml
+Выполнение: sudo kubectl apply -f frontend-deployment.yaml
+Выполнение: sudo kubectl apply -f db-deployment.yaml  
+deployment.apps/db created
+service/db unchanged
+Выполнение: sudo kubectl apply -f backend-deployment.yaml
+deployment.apps/backend created
+service/backend unchanged
+Выполнение: sudo kubectl apply -f frontend-deployment.yaml
+deployment.apps/frontend created
+service/frontend unchanged
+Выполнение: sudo kubectl apply -f db-deployment.yaml  
+deployment.apps/db unchanged
+service/db unchanged
+Выполнение: sudo kubectl apply -f backend-deployment.yaml
+deployment.apps/backend unchanged
+service/backend unchanged
+Выполнение: sudo kubectl apply -f frontend-deployment.yaml
+deployment.apps/frontend unchanged
+service/frontend unchanged
+Выполнение: sudo kubectl apply -f db-deployment.yaml  
+deployment.apps/db created
+service/db unchanged
+Выполнение: sudo kubectl apply -f backend-deployment.yaml
+deployment.apps/backend created
+service/backend unchanged
+Выполнение: sudo kubectl apply -f frontend-deployment.yaml
+deployment.apps/frontend created
+service/frontend unchanged
