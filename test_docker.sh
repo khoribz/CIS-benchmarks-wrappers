@@ -1,8 +1,18 @@
 #!/bin/bash
 
 # Лог-файл для хранения результатов
-LOG_FILE="deployment.log"
+LOG_FILE="docker-deployment.log"
 DOCKER_BENCH_SECURITY_DIR="docker-bench-security"  # Директория со скриптом docker-bench-security
+
+# Функция для установки docker-bench-security
+install_docker_bench_security() {
+    if [ ! -d "$DOCKER_BENCH_SECURITY_DIR" ]; then
+        echo "Установка docker-bench-security..." | tee -a $LOG_FILE
+        git clone https://github.com/docker/docker-bench-security.git $DOCKER_BENCH_SECURITY_DIR | tee -a $LOG_FILE
+    else
+        echo "docker-bench-security уже установлен." | tee -a $LOG_FILE
+    fi
+}
 
 # Функция для запроса параметров контейнера у пользователя
 get_container_options() {
@@ -50,11 +60,11 @@ run_docker_bench() {
 
 # Основная логика скрипта
 main() {
-    echo "Запуск процесса проверки безопасности и развертывания контейнера..." > $LOG_FILE
+    echo "Запуск процесса установки docker-bench-security, проверки безопасности и развертывания контейнера..." > $LOG_FILE
 
+    install_docker_bench_security
     get_container_options
     run_docker_bench
 }
 
 main
-

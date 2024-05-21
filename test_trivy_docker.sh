@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Лог-файл для хранения результатов
-LOG_FILE="trivy-scan.log"
+LOG_FILE="trivy-scan-docker.log"
 IMAGE_NAME=$1  # Имя образа передается как аргумент скрипта
 
 # Проверка наличия аргумента

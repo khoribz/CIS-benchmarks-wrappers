@@ -37,7 +37,7 @@ deploy_microservices() {
     do
         if [[ $line == kubectl* ]]; then
             echo "Выполнение: sudo $line" | tee -a $LOG_FILE
-            $line | tee -a $LOG_FILE  # Используем sudo для выполнения команд
+            $line | tee -a $LOG_FILE
             if [ $? -ne 0 ]; then
                 echo "Ошибка выполнения команды: sudo $line" | tee -a $LOG_FILE
                 # Возвращаемся в исходную директорию
